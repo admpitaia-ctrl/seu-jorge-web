@@ -1,0 +1,4 @@
+Esta pasta guarda a versão HTML original do projeto apenas como backup/histórico.
+
+A versão final para teste e avaliação está na raiz do projeto e usa ficheiros .php.
+Os ficheiros .html da raiz fazem redirecionamento para as páginas PHP finais.

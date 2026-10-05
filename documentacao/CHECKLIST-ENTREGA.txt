@@ -1,0 +1,100 @@
+CHECKLIST DE ENTREGA - CASO PRÁTICO SEU JORGE PHP
+
+OBJETIVO DO DOCUMENTO:
+Este ficheiro serve para mostrar rapidamente ao avaliador que o projeto cumpre os requisitos do enunciado.
+
+[OK] Páginas principais presentes na raiz:
+- index.html redireciona para index.php
+- sobre.html redireciona para sobre.php
+- albuns.html redireciona para albuns.php
+- tour.html redireciona para tour.php
+- contactos.html redireciona para contactos.php
+- loja.html redireciona para loja.php
+
+[OK] Versão PHP principal:
+- index.php
+- sobre.php
+- albuns.php
+- tour.php
+- contactos.php
+- loja.php
+
+[OK] Sistema de utilizadores:
+- register.php cria utilizador normal com role user
+- login.php valida username/email e senha
+- logout.php termina a sessão
+- profile.php é página protegida
+- password_hash usado no registo
+- password_verify usado no login
+- sessões PHP usadas para autenticação
+
+[OK] Loja online:
+- Produtos vêm da base de dados MySQL
+- Produtos têm imagem, descrição, preço, stock e categoria
+- Loja tem filtro por categoria
+- Loja tem busca por nome de produto
+
+[OK] Carrinho:
+- Carrinho guardado em sessão PHP
+- cart.php mostra produtos, preço, quantidade, subtotal e total
+- É possível alterar quantidade
+- É possível remover produto
+
+[OK] Checkout:
+- checkout.php exige login
+- Pedido é gravado em orders
+- Produtos do pedido são gravados em order_items
+- Stock é atualizado após a compra
+
+[OK] Área de administração:
+- admin.php só abre para role admin
+- admin_products.php lista, edita e remove produtos
+- admin_product_form.php adiciona/edita produtos
+- Upload de imagem do produto por ficheiro
+- Categorias por dropdown
+- Possibilidade de criar nova categoria no próprio formulário
+- admin_users.php gere utilizadores e funções
+- admin_orders.php gere encomendas e estados
+- admin_order_details.php mostra detalhes completos de cada encomenda
+
+[OK] Melhorias extras:
+- Formulários destacam campos obrigatórios vazios com contorno vermelho
+- O aviso padrão de preenchimento obrigatório do navegador continua ativo
+- Campos do formulário de contacto têm atributo name
+- Utilizador normal consegue ver detalhes das próprias encomendas
+- Admin consegue ver detalhes completos das encomendas
+
+[OK] Base de dados:
+- database/seu_jorge_store.sql incluído
+- users
+- products
+- categories
+- orders
+- order_items
+
+DADOS DE TESTE DO ADMIN:
+Utilizador: admin
+Senha: admin123
+
+ORDEM SUGERIDA DE TESTE:
+1. Importar database/seu_jorge_store.sql no phpMyAdmin
+2. Abrir index.php
+3. Criar utilizador em register.php
+4. Fazer login como utilizador normal
+5. Adicionar produto ao carrinho
+6. Atualizar carrinho
+7. Finalizar compra
+8. Fazer login como admin
+9. Adicionar produto com imagem
+10. Criar nova categoria
+11. Ver encomenda no admin
+12. Abrir detalhes da encomenda
+13. Marcar encomenda como completed
+
+[OK] Checkout com confirmação de morada de entrega.
+[OK] Morada guardada no perfil do utilizador.
+[OK] Encomenda grava a morada usada no momento da compra.
+[OK] Admin vê os produtos comprados diretamente na listagem de encomendas.
+[OK] Admin vê a morada da encomenda diretamente na listagem.
+[OK] Link para abrir a morada no Google Maps.
+[OK] Datalist/autocomplete simples para ajudar o preenchimento da morada sem API externa.

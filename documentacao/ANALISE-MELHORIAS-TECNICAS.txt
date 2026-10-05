@@ -1,0 +1,77 @@
+ANÁLISE TÉCNICA DO PROJETO - SEU JORGE PHP
+
+OBJETIVO:
+Este documento resume a revisão técnica feita no projeto e as melhorias aplicadas para ir além do pedido base do enunciado.
+
+1. ESTRUTURA GERAL
+O projeto foi mantido com a identidade original do website do Seu Jorge, mas a versão principal passou a ser PHP.
+As páginas HTML antigas foram preservadas em original-html/ e também foram criados ficheiros .html na raiz para redirecionar para os .php.
+
+2. INCLUDES
+Foram usados includes para evitar repetição:
+- includes/header.php
+- includes/navbar.php
+- includes/footer.php
+- includes/functions.php
+- includes/auth.php
+- includes/admin_check.php
+
+Isto melhora a manutenção porque o menu, cabeçalho e rodapé ficam centralizados.
+
+3. AUTENTICAÇÃO
+O registo cria apenas utilizadores normais com role user.
+O administrador é definido pela coluna role = admin na base de dados.
+Isto impede que qualquer visitante se registe como administrador.
+
+4. SEGURANÇA DE SENHAS
+O projeto usa password_hash para guardar a senha e password_verify para validar o login.
+Assim, a senha real não fica visível na tabela users.
+
+5. LOJA E CARRINHO
+A loja deixou de depender apenas de JSON/localStorage e passou a trabalhar com MySQL e sessões PHP.
+Isto está mais fiel ao enunciado do exercício.
+
+6. ADMINISTRAÇÃO
+A área de administração foi melhorada com:
+- gestão de produtos;
+- gestão de utilizadores;
+- gestão de encomendas;
+- detalhe completo da encomenda;
+- upload de imagem do produto;
+- categorias por dropdown;
+- opção para criar nova categoria.
+
+7. FORMULÁRIOS
+Foi criada uma validação visual extra:
+- campos required vazios recebem contorno vermelho;
+- o aviso padrão do navegador continua ativo;
+- o utilizador entende rapidamente quais campos faltam preencher.
+
+8. FORMULÁRIO DE CONTACTO
+Os campos receberam name, além de id.
+Isto prepara o formulário para um envio real por PHP no futuro, caso o projeto evolua.
+
+9. MELHORIAS FUTURAS POSSÍVEIS
+Para uma versão ainda mais profissional em ambiente real, poderia ser adicionado:
+- token CSRF em todos os formulários;
+- confirmação por modal em vez de confirm() simples;
+- paginação de produtos e encomendas;
+- pesquisa na área admin;
+- upload com validação MIME mais profunda;
+- sistema de recuperação de senha;
+- envio de email após checkout;
+- painel gráfico de vendas.
+
+10. TESTE TÉCNICO
+Todos os ficheiros PHP foram verificados com php -l e não apresentaram erro de sintaxe.
+
+MELHORIA ANALÍTICA - ENCOMENDAS MAIS COMPLETAS
+----------------------------------------------
+Foi adicionada uma lógica mais próxima de uma loja online real:
+- o utilizador tem morada associada à conta;
+- o checkout confirma a morada antes da compra;
+- a encomenda guarda a morada do momento da compra;
+- o admin vê o produto comprado já na tabela principal de encomendas;
+- o admin tem link direto para o Google Maps.
+
+Esta melhoria vai além do PDF, mas continua alinhada ao objetivo do exercício porque fortalece a área de encomendas e a gestão da loja online.

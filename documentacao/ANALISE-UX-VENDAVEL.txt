@@ -1,0 +1,91 @@
+ANÁLISE UX - SITE MAIS VENDÁVEL
+
+Melhorias implementadas nesta versão:
+
+[OK] Produto pode ser adicionado ao carrinho sem recarregar a loja.
+[OK] Utilizador continua na mesma posição da página após adicionar produto.
+[OK] Badge do carrinho atualiza a quantidade de itens.
+[OK] Toast/mensagem visual confirma o produto adicionado.
+[OK] Checkout exige morada completa.
+[OK] Registo exige morada inicial do utilizador.
+[OK] Endereço tem autocomplete com sugestões enquanto o utilizador escreve.
+[OK] Se o autocomplete falhar, o preenchimento manual continua funcionando.
+[OK] Admin vê produtos e morada nas encomendas.
+[OK] Admin tem botão explícito para sair da área administrativa.
+[OK] Logout destrói a sessão e exige novo login para voltar ao admin.
+
+Melhorias futuras para um produto comercial real:
+
+1. Integração com Google Places API para autocomplete com validação oficial.
+2. Integração com pagamentos reais: Stripe, PayPal ou Multibanco.
+3. Envio de email automático após checkout.
+4. Geração de fatura/recibo em PDF.
+5. Página para editar morada e alterar senha.
+6. Estados avançados da encomenda: pago, em preparação, enviado, entregue.
+7. Relatório de vendas mensal no admin.
+8. Produtos com baixo stock destacados no admin.
+9. Histórico de alterações feitas pelo admin.
+10. Pesquisa e filtros avançados no painel de encomendas.
+
+MELHORIAS ADICIONADAS NA VERSÃO DE COMPRA E ENTREGA
+----------------------------------------------------
+1. Navbar mais leve para visitante:
+   - Login e Registar aparecem em formato vertical compacto.
+   - Carrinho aparece apenas como ícone com contador.
+   - Ao passar o rato sobre o carrinho, aparece a palavra "Carrinho" com animação suave.
+
+2. Carrinho com atualização automática:
+   - Ao alterar a quantidade, o subtotal e o total atualizam automaticamente.
+   - O utilizador não precisa clicar em "Atualizar Carrinho".
+   - Existe fallback com botão dentro de <noscript> caso o JavaScript esteja desativado.
+
+3. Novo fluxo de entrega:
+   - Pendente: encomenda criada e aguardando preparação.
+   - A caminho: encomenda enviada para entrega.
+   - Entregue: encomenda finalizada.
+
+4. Confirmação pelo cliente:
+   - Quando a encomenda está "A caminho", o cliente pode confirmar a receção na página de detalhes da encomenda.
+
+5. Guia de entrega para transportador:
+   - O admin pode abrir uma guia de entrega imprimível.
+   - A guia pode ser impressa ou guardada em PDF pelo navegador.
+   - Inclui dados do cliente, morada, produtos, total, observações e espaço para assinaturas.
+
+MELHORIA: GUIA DE ENTREGA E ENVIO AO MOTORISTA
+----------------------------------------------
+A guia de entrega foi melhorada para uso real pelo administrador:
+
+1. O link bruto do Google Maps foi removido da versão impressa/PDF.
+2. Foi criado um botão visual para abrir a localização no Google Maps apenas no ecrã.
+3. Foi criada a ação admin_send_driver_whatsapp.php.
+4. O administrador pode inserir o número do motorista com prefixo +351.
+5. O sistema prepara uma mensagem de WhatsApp com:
+   - número da encomenda;
+   - cliente;
+   - morada;
+   - link do Google Maps;
+   - produtos e quantidades;
+   - total;
+   - link da guia de entrega.
+6. Para envio automático de PDF anexado seria necessária uma API oficial do WhatsApp.
+
+
+
+ATUALIZAÇÃO AJAX NO ADMIN
+
+Para melhorar a experiência do administrador, foram aplicadas atualizações sem recarregar a página nas seguintes áreas:
+
+1. Gerir Encomendas:
+   - Ao alterar o estado da encomenda e clicar em Guardar, o sistema usa AJAX para atualizar a base de dados sem reiniciar a página.
+   - O admin permanece no mesmo ponto da tabela.
+   - Aparece feedback visual de sucesso ou erro.
+
+2. Gerir Utilizadores:
+   - Ao alterar a função user/admin e clicar em Guardar, a alteração é feita por AJAX.
+   - A remoção de utilizadores também remove a linha da tabela sem recarregar.
+
+3. Gerir Produtos:
+   - A remoção de produtos foi melhorada com AJAX, removendo a linha da tabela sem reiniciar a página.
+
+As funcionalidades continuam com fallback normal em PHP caso o JavaScript esteja desativado.

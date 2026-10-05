@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "nome": "Blazer do Samba",
+      "preco": 47.99,
+      "categoria": "roupa",
+      "descricao": "Blazer Edição 2025 do Samba",
+      "imagem": "picture/home/modelo/modelo-fundo-vermelho.jpg",
+      "quantidade": 10
+    },
+            {
+      "nome": "Conjunto Verão",
+      "preco": 37.99,
+      "categoria": "roupa",
+      "descricao": "Conjunto de verão - Seu Loiro",
+      "imagem": "picture/home/slide/musica-brasileira.png",
+      "quantidade": 15
+    },
+    {
+      "nome": "Poster Edição Limitada",
+      "preco": 15,
+      "categoria": "poster",
+      "descricao": "Poster exclusivo edição limitada",
+      "imagem": "picture/home/slide/band.jpg",
+      "quantidade": 20
+    },
+    {
+      "nome": "Vinil Álbum",
+      "preco": 30,
+      "categoria": "vinil",
+      "descricao": "Vinil clássico do artista",
+      "imagem": "picture/home/slide/imagem-principal.jpg",
+      "quantidade": 25
+    },
+    {
+      "nome": "Álbum Musical ao vivo",
+      "preco": 13.99,
+      "categoria": "vinil",
+      "descricao": "Álbum ao vivo do artista",
+      "imagem": "picture/home/slide/musica-brasileira.png",
+      "quantidade": 30
+    },
+    {
+      "nome": "Marighella - Livro",
+      "preco": 23.55,
+      "categoria": "Livro",
+      "descricao": "Livro sobre o movimento Marighella",
+      "imagem": "picture/home/slide/musica-brasileira.png",
+      "quantidade": 20
+    },
+        {
+      "nome": "Marighella - Livro",
+      "preco": 23.55,
+      "categoria": "Livro",
+      "descricao": "Livro sobre o movimento Marighella",
+      "imagem": "picture/home/slide/musica-brasileira.png",
+      "quantidade": 20
+    }
+    
+  ]
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seu Jorge | Loja Oficial</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Loja oficial do artista Seu Jorge">
+    <meta name="keywords" content="Seu Jorge, loja, música brasileira, merch">
+    <meta name="author" content="Hasan Marouf">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="picture/Logo/logo-seu-jorge.png" alt="Logo" height="45">
+            </a>
+
+            <button class="navbar-toggler custom-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="albuns.html">Álbuns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tour.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactos.html">Contacto</a></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="loja.html">
+                            Loja 🛒 <span id="contador-carrinho">0</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- LOJA -->
+<section class="loja-section">
+    <div class="container">
+
+        <h2 class="loja-title">Loja Oficial</h2>
+        <div class="loja-line"></div>
+
+        <!-- FILTRO -->
+        <div class="loja-filtro">
+            <select id="filtro-categoria">
+                <option value="">Todas as categorias</option>
+            </select>
+        </div>
+
+        <!-- BUSCA -->
+        <input type="text" id="busca-produto" placeholder="🔍 Procurar produto..." class="form-control mb-4">
+
+        <!-- PRODUTOS -->
+        <div id="lista-produtos" class="row g-4"></div>
+
+        <!-- BOTÃO VER MAIS -->
+        <div class="text-center mt-4">
+            <button id="btn-ver-mais" class="btn btn-outline-light">
+                Ver mais
+            </button>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+
+                <span class="close-btn">&times;</span>
+
+                <h2 id="lightbox-title"></h2>
+
+                <img id="lightbox-image" src="" alt="Produto">
+
+                <p id="lightbox-description"></p>
+                <p id="lightbox-price"></p>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CARRINHO -->
+<section class="calculo-section">
+    <div class="container">
+
+        <div class="calculo-card">
+
+            <h4 style="color:#DACBB7;">🛒 Carrinho</h4>
+
+            <ul id="lista-carrinho" class="list-unstyled mt-3"></ul>
+
+            <h3 id="total-carrinho" style="color:#DACBB7;">
+                Total: €0
+            </h3>
+
+            <!-- BOTÃO COMPRAR -->
+            <div class="text-center mt-3">
+                <button id="btn-comprar" class="btn btn-success">
+                    Finalizar Compra
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- TOAST -->
+<div id="toast" class="toast-custom">
+    Produto adicionado ao carrinho!
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container text-center">
+
+        <div class="footer-logo">
+            <img src="picture/Logo/logo-seu-jorge.png" alt="Logo">
+        </div>
+
+        <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-spotify"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <p class="footer-copy">
+            © 2025 Seu Jorge
+        </p>
+
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
