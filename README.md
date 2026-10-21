@@ -2,6 +2,62 @@
 
 Projeto académico de desenvolvimento web dedicado ao artista **Seu Jorge**, criado para explorar a evolução de um website visual em HTML para uma aplicação dinâmica em PHP com base de dados e funcionalidades de e-commerce.
 
+## Capturas reais
+
+Capturas reais das páginas públicas da aplicação, em desktop e mobile. As imagens preservam a interface original do projeto.
+
+### Página inicial
+
+Slide “Seu Jorge — A voz do samba soul”, com identidade visual, navegação e acesso à discografia.
+
+<table>
+<tr><th>Desktop</th><th>Mobile</th></tr>
+<tr>
+<td width="70%" valign="top"><a href="documentacao/desktop-01-inicio.jpg"><img src="documentacao/desktop-01-inicio.jpg" alt="Página inicial em desktop" width="100%"></a></td>
+<td width="30%" valign="top"><a href="documentacao/mobile-01-inicio.jpg"><img src="documentacao/mobile-01-inicio.jpg" alt="Página inicial em mobile" width="100%"></a></td>
+</tr>
+</table>
+
+### Sobre e biografia
+
+Apresentação do artista, fotografia e organização editorial da biografia.
+
+<table>
+<tr><th>Desktop</th><th>Mobile</th></tr>
+<tr>
+<td width="70%" valign="top"><a href="documentacao/desktop-02-sobre.jpg"><img src="documentacao/desktop-02-sobre.jpg" alt="Sobre e biografia em desktop" width="100%"></a></td>
+<td width="30%" valign="top"><a href="documentacao/mobile-02-sobre.jpg"><img src="documentacao/mobile-02-sobre.jpg" alt="Sobre e biografia em mobile" width="100%"></a></td>
+</tr>
+</table>
+
+### Tour
+
+Página de apresentações do projeto académico. As datas mostradas pertencem à demonstração e não são uma agenda verificada de concertos.
+
+<table>
+<tr><th>Desktop</th><th>Mobile</th></tr>
+<tr>
+<td width="70%" valign="top"><a href="documentacao/desktop-03-tour.jpg"><img src="documentacao/desktop-03-tour.jpg" alt="Tour em desktop" width="100%"></a></td>
+<td width="30%" valign="top"><a href="documentacao/mobile-03-tour.jpg"><img src="documentacao/mobile-03-tour.jpg" alt="Tour em mobile" width="100%"></a></td>
+</tr>
+</table>
+
+### Apresentação do artista
+
+Retrato completo com fundo vermelho, descrição e ligação “Conheça a história”. A cor é um efeito de interação já existente no website.
+
+<table>
+<tr><th>Desktop</th><th>Mobile</th></tr>
+<tr>
+<td width="70%" valign="top"><a href="documentacao/desktop-04-fundo-vermelho.jpg"><img src="documentacao/desktop-04-fundo-vermelho.jpg" alt="Apresentação do artista em desktop" width="100%"></a></td>
+<td width="30%" valign="top"><a href="documentacao/mobile-04-fundo-vermelho.jpg"><img src="documentacao/mobile-04-fundo-vermelho.jpg" alt="Apresentação do artista em mobile" width="100%"></a></td>
+</tr>
+</table>
+
+> Esta galeria documenta as páginas públicas observadas. As áreas de loja, carrinho e administração descritas neste README não foram validadas nesta sessão de capturas.
+
+
+
 ## Objetivo
 
 O projeto começou com foco em front-end, identidade visual e organização de conteúdo. Ao longo da evolução, passou a integrar autenticação, loja online, carrinho, checkout, área de utilizador e painel administrativo.
